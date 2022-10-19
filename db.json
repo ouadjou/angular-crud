@@ -1,0 +1,59 @@
+{
+  "productList": [
+    {
+      "productName": "AZR",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 12,
+      "comment": "12",
+      "date": "2022-10-18T23:00:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "takhmirt",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 270,
+      "comment": "THKH",
+      "date": "2022-11-14T23:00:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "takhmirt",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 270,
+      "comment": "THKH",
+      "date": "2022-11-14T23:00:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "the second product",
+      "category": "Electrinic",
+      "freshness": "Second Hand",
+      "price": 2134,
+      "comment": "not the last one",
+      "date": "2022-10-11T23:00:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "AZ",
+      "category": "Vegetables",
+      "freshness": "Second Hand",
+      "price": 8,
+      "comment": "AZMD",
+      "date": "2022-10-11T23:00:00.000Z",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
