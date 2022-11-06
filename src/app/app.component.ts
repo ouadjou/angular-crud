@@ -31,7 +31,11 @@ export class AppComponent implements OnInit{
   openDialog() {
     this.dialog.open(DialogComponent, {
       width:'30%'
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val==='save'){
+        this.getAllProducts();
+      }
+    })
   }
 
   getAllProducts(){
@@ -45,12 +49,16 @@ export class AppComponent implements OnInit{
       error:(err)=>
       alert("Error while feching the Record")
 
-    })
+    }) 
   }
   editProduct(row: any){
     this.dialog.open(DialogComponent,{
       width:'30%',
-      data :row    })
+      data :row }).afterClosed().subscribe(val=>{
+        if(val==='update'){
+          this.getAllProducts();
+        }
+      })
   }
 
   applyFilter(event: Event) {
@@ -60,6 +68,20 @@ export class AppComponent implements OnInit{
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  deleteProduct(id:number){
+    this.api.deleteProduct(id)
+    .subscribe({
+      next:(res)=>{
+        alert("Product deleted successfully")
+        this.getAllProducts();
+      },
+      error:()=>{
+        alert("Error while deleting the product !");}
+
+    })
+
   }
 
 

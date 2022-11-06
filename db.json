@@ -1,48 +1,30 @@
 {
   "productList": [
     {
-      "productName": "AZR",
-      "category": "Fruits",
-      "freshness": "Brand New",
-      "price": 12,
-      "comment": "12",
-      "date": "2022-10-18T23:00:00.000Z",
-      "id": 1
-    },
-    {
-      "productName": "takhmirt",
+      "productName": "prod 2",
       "category": "Vegetables",
-      "freshness": "Brand New",
-      "price": 270,
-      "comment": "THKH",
-      "date": "2022-11-14T23:00:00.000Z",
-      "id": 2
-    },
-    {
-      "productName": "takhmirt",
-      "category": "Vegetables",
-      "freshness": "Brand New",
-      "price": 270,
-      "comment": "THKH",
-      "date": "2022-11-14T23:00:00.000Z",
+      "freshness": "Second Hand",
+      "price": 123,
+      "comment": "Good product",
+      "date": "2022-10-12T23:00:00.000Z",
       "id": 3
     },
     {
-      "productName": "the second product",
+      "productName": "prod 11",
       "category": "Electrinic",
-      "freshness": "Second Hand",
-      "price": 2134,
-      "comment": "not the last one",
-      "date": "2022-10-11T23:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 200,
+      "comment": "this is a conll",
+      "date": "2022-11-15T23:00:00.000Z",
       "id": 4
     },
     {
-      "productName": "AZ",
-      "category": "Vegetables",
-      "freshness": "Second Hand",
-      "price": 8,
-      "comment": "AZMD",
-      "date": "2022-10-11T23:00:00.000Z",
+      "productName": "prod 999",
+      "category": "Electrinic",
+      "freshness": "Brand New",
+      "price": 9999,
+      "comment": "HGG HGHG",
+      "date": "2022-11-08T23:00:00.000Z",
       "id": 5
     }
   ],

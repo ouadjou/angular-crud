@@ -32,7 +32,7 @@ export class DialogComponent implements OnInit {
         price:['',Validators.required],
         comment:['',Validators.required],
         date:['',Validators.required],
-        
+         
 
       }
     );
@@ -49,21 +49,39 @@ export class DialogComponent implements OnInit {
   
 
   addProduct(){
-    //console.log(this.productForm.value);
-    if(this.productForm.valid){
-      this.api.postProduct(this.productForm.value)
-      .subscribe({
-        next:(res)=>{
-          alert("Product added successfully")
-          this.productForm.reset();
-          this.dialogRef.close('save');
-          
-        },
-        error:()=>{
-          alert("Error while adding the product")
-        }
-      })
+    if(!this.editData){
+      if(this.productForm.valid){
+        this.api.postProduct(this.productForm.value)
+        .subscribe({
+          next:(res)=>{
+            alert("Product added successfully")
+            this.productForm.reset();
+            this.dialogRef.close('save');
+            
+          },
+          error:()=>{
+            alert("Error while adding the product")
+          }
+        })
+      }
     }
+    else{
+      this.updateProduct()
+    } 
   }
 
+  updateProduct(){
+
+    this.api.putProduct(this.productForm.value,this.editData.id)
+    .subscribe({
+      next:(res)=>{
+        alert("Product updated Successfully");
+        this.productForm.reset();
+        this.dialogRef.close('update');
+      }, error:()=>{
+        alert("Error while updating the record !");
+      }
+    })
+
+  }
 }
